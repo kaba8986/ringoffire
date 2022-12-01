@@ -20,7 +20,7 @@
 
 .top-card {
     cursor: pointer;
-    transition: all 0.15s ease-in-out;
+    transition: all 125ms ease-in-out;
 
     &:hover {
         transform: scale(1.1) translateY(-10px);
@@ -28,26 +28,7 @@
 }
 
 .pick-card {
-    transition: all 0.15s ease-in-out;
-    transform: scale(1.5) !important;
-    animation: pick-card-animation 2s ease-in-out;
+    transition: all 125ms ease-in-out;
+    transform: scale(1.5);
 }
 
-
-@keyframes pick-card-animation {
-    from{
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.7);
-    }
-
-    50% {
-        transform: scale(1.7);
-    }
-
-    100% {
-        transform: scale(1.5) translateX(50px);
-    }
-}
