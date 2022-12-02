@@ -1,12 +1,28 @@
 import { Component } from '@angular/core';
+import { Game } from 'src/models/game';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
-export class GameComponent {
+export class GameComponent implements OnInit {
   pickCardAnimation = false;
+  game!: Game;
+
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+    this.newGame();
+    console.log(this.game);
+  }
+
+  newGame() {
+    this.game = new Game();
+  }
 
   takeCard() {
     this.pickCardAnimation = true;
