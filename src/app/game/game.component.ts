@@ -9,7 +9,9 @@ import { OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
+  currentCard: string = '';
   game!: Game;
+  
 
   constructor() {
 
@@ -25,6 +27,8 @@ export class GameComponent implements OnInit {
   }
 
   takeCard() {
+    this.currentCard = this.game.stack.pop();
+    console.log(this.currentCard);
     this.pickCardAnimation = true;
   }
 }
