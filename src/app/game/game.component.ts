@@ -10,7 +10,7 @@ import { OnInit } from '@angular/core';
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard: string = '';
-  game!: Game;
+  game: Game;
   
 
   constructor() {
