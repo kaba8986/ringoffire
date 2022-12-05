@@ -28,10 +28,17 @@
 }
 
 
+.played-card {
+    right: 25px;
+    transform: scale(1.7) translateX(140px) translateY(-180px) rotate(-10deg);
+}
+
+
 .pick-card {
     animation: pick-card-animation 1s ease-in-out;
     transform: scale(1.7) translateX(140px) translateY(-180px) rotate(-10deg);
 }
+
 
 
 @keyframes pick-card-animation {
