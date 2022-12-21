@@ -115,3 +115,8 @@ app-player, app-player-mobile {
         object-fit: contain;
     }
 }
+
+.preloadImage {
+    opacity: 0;
+    z-index: -99999;
+}
