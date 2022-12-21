@@ -40,6 +40,8 @@ export class GameComponent implements OnInit {
       this.game.stack = game.stack;
       this.game.pickCardAnimation = game.pickCardAnimation;
       this.game.currentCard = game.currentCard;
+      console.log(game.players);
+      console.log(game.playerImages);
     });
     })
   }
