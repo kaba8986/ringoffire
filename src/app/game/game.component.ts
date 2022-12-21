@@ -69,9 +69,15 @@ export class GameComponent implements OnInit {
     const dialogRef = this.dialog.open(EditPlayerComponent);
 
     dialogRef.afterClosed().subscribe((change: string) => {
-      console.log('dialog closed with change ', change)
-      this.game.playerImages[playerId] = change;
-      this.saveGame();
+      if(change) {
+        if(change == 'DELETE') {
+          this.game.playerImages.splice(playerId, 1);
+          this.game.players.splice(playerId, 1);
+        } else {
+          this.game.playerImages[playerId] = change;
+        }
+        this.saveGame();
+      }
     });
   }
 
